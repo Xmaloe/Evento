@@ -1,0 +1,59 @@
+@use '../variables';
+
+.infos-bar {
+    // Espaçamento interno da barra
+    padding: 16px 24px;
+    
+    // Cor de fundo da barra
+    background-color: variables.$textColor;
+    
+    // Layout flexível, distribuindo espaço entre os itens
+    display: flex;
+    justify-content: space-between;
+
+    // Estiliza os elementos dentro da classe '__infos' dentro de '.infos-bar'
+    &__infos {
+        // Layout flexível com espaçamento entre os itens
+        display: flex;
+        gap: 40px;
+
+        // Estiliza cada item dentro de '__infos'
+        &__item {
+            // Tamanho da fonte e cor do texto
+            font-size: 14px;
+            color: variables.$secondaryTextColor;
+
+            // Estiliza elementos 'b' (negrito) dentro de '__item'
+            b {
+                // Cor e tamanho da fonte para elementos 'b'
+                color: variables.$secondaryTextColor;
+                font-size: 18px;
+                display: block; // Torna o elemento 'b' um bloco para controlar o layout
+            }
+        }
+    }
+
+    // Estilos específicos para telas menores que 640px
+    @media (max-width: 640px) {
+        // Modifica o layout para exibir blocos em vez de linha
+        display: block;
+
+        // Modifica o layout de '__infos' para exibir blocos
+        &__infos {
+            display: block;
+
+            // Adiciona margem inferior para espaçamento entre os itens
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    // Estilos específicos para telas menores que 1024px
+    @media (max-width: 1024px) {
+        // Reduz o espaçamento entre os itens em '__infos'
+        &__infos {
+            gap: 16px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+// Importa as variáveis definidas em 'variables'
+@use 'variables';
+
+// Estilo para a seção 'hero'
+.hero {
+    // Espaçamento acima e abaixo da seção
+    padding-top: 64px;
+    padding-bottom: 100px;
+    
+    // Imagem de fundo, sem repetição, cobrindo todo o espaço
+    background-image: url(../images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // Posição relativa para permitir posicionamento absoluto dentro
+    position: relative;
+
+    // Estiliza o conteúdo dentro da classe 'container' dentro de '.hero'
+    .container {
+        position: relative;
+    }
+
+    // Pseudo-elemento para criar uma sobreposição escura sobre a imagem de fundo
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$secondaryTextColor;
+        content: '';
+        opacity: .7; // Opacidade para um efeito de sobreposição
+    }
+
+    // Estiliza o texto dentro da seção 'hero'
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    // Estiliza o logotipo dentro da seção 'hero'
+    &__logo {
+        margin: 0 auto;
+        height: 80px;
+        display: block;
+    }
+
+    // Estilos específicos para telas menores que 640px
+    @media (max-width: 640px) {
+        padding: 40px 0; // Ajusta o espaçamento na versão responsiva
+
+        // Ajusta o tamanho do logotipo na versão responsiva
+        &__logo {
+            height: 40px;
+        }
+
+        // Ajusta o estilo do texto na versão responsiva
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
