@@ -67,14 +67,15 @@
         }
 
         &__image {
-            width: 20%;
-            height: 20%;
+            width: 100%;
+            height: auto;
         }
 
         // Ajusta os detalhes para ocupar a largura total e adicionar margem inferior
         &__details {
             margin-right: 0;
             margin-bottom: 16px;
+            font-size: 12px;
         }
     }
 }
