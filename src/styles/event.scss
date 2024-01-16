@@ -60,7 +60,7 @@
     }
 
     // Estilos específicos para telas menores que 640px
-    @media (min-width: 200px) and (max-width: 828px) {
+    @media (min-width: 100px) and (max-width: 828px) {
         // Ajusta o contêiner para exibir blocos em vez de linha
         .container {
             display: block;

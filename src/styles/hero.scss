@@ -50,7 +50,7 @@
     }
 
     // Estilos específicos para telas menores que 640px
-    @media (min-width: 200px) and (max-width: 828px) {
+    @media (min-width: 100px) and (max-width: 828px) {
         padding: 40px 0; // Ajusta o espaçamento na versão responsiva
 
         // Ajusta o tamanho do logotipo na versão responsiva
