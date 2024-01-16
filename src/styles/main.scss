@@ -18,8 +18,8 @@
     width: 100%;
     margin: 0 auto;
 
-    @media (max-width: 540px) {
-        max-width: 80%;
+    @media (min-width: 350px) and (max-width: 828px) {
+        max-width: 100%;
     }
 
     @media (max-width: 1024px) {

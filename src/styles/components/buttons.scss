@@ -10,12 +10,13 @@
 
     &--primary {
         color: #fff;
+        border-radius: 8px;
         background-color: variables.$blue2;
     }
 
-    @media (max-width: 640px) {
+    @media (min-width: 350px) and (max-width: 828px) {
         display: block;
-        width: 100%;
+        width: 100%
     }
 
     @media (max-width: 1024px) {
